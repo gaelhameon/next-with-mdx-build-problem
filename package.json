@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "next",
-    "build": "echo 'toto' && next build",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -14,5 +14,5 @@
     "react-dom": "^16.8.6",
     "remark-copy-linked-files": "https://github.com/gaelhameon/remark-copy-linked-files/#feat/nextjs"
   },
-  "license": ""
+  "license": "MIT"
 }
