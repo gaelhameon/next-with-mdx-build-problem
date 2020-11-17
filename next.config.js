@@ -1,6 +1,7 @@
 const path = require('path');
 
 const copyLinkedFiles = require('remark-copy-linked-files');
+const images = require('remark-images');
 
 const MD_MEDIA_COPIES = 'md-media-copies';
 const destinationDir = path.join(__dirname, 'public', MD_MEDIA_COPIES);
@@ -13,7 +14,8 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      [copyLinkedFiles, { destinationDir, makeNewUrlFn }]
+      images,
+      // [copyLinkedFiles, { destinationDir, makeNewUrlFn }]
     ]
   }
 })
