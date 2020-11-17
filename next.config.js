@@ -14,8 +14,8 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
+      [copyLinkedFiles, { destinationDir, makeNewUrlFn }],
       images,
-      // [copyLinkedFiles, { destinationDir, makeNewUrlFn }]
     ]
   }
 })
