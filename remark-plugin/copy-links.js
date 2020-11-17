@@ -48,6 +48,7 @@ module.exports = (opts = {}) => {
     } = opts;
 
     return async (tree, { cwd, path }) => {
+      console.log(`top of transformer with file at path: ${path}`);
       const assets = [];
 
       const handleUrl = async (url) => {
@@ -168,6 +169,7 @@ module.exports = (opts = {}) => {
         {},
       );
 
+      console.log(`end of transformer for file at path: ${path}`);
       return newTree;
     };
   } catch (error) {
