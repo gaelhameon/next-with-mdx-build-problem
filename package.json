@@ -17,7 +17,14 @@
     "remark-copy-linked-files": "^1.0.20",
     "remark-images": "^2.0.0",
     "unist-util-is": "^4.0.3",
-    "unist-util-visit-parents": "^3.1.1"
+    "unist-util-visit-parents": "^3.1.1",
+    "apr-for-each": "^3.0.3",
+    "apr-intercept": "^3.0.4",
+    "cheerio": "^1.0.0-rc.3",
+    "cp-file": "^9.0.0",
+    "is-relative-url": "^3.0.0",
+    "lodash.uniqby": "^4.7.0",
+    "rev-hash": "^3.0.0"
   },
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
 const path = require('path');
 
-const copyLinkedFiles = require('remark-copy-linked-files');
+const copyLinkedFiles = require('./remark-plugin/copy-links'); // version that logs even more stuff
 const images = require('./remark-plugin/images'); // version that logs something during build
 
 const MD_MEDIA_COPIES = 'md-media-copies';
@@ -14,7 +14,7 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      // [copyLinkedFiles, { destinationDir, staticPath: '/md-media-copies/' }],
+      [copyLinkedFiles, { destinationDir, makeNewUrlFn}],
       images,
     ]
   }
