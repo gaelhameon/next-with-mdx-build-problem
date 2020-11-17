@@ -4937,9 +4937,10 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-"remark-copy-linked-files@https://github.com/gaelhameon/remark-copy-linked-files/#feat/nextjs":
-  version "1.0.19"
-  resolved "https://github.com/gaelhameon/remark-copy-linked-files/#0130acc1d504b3155899f9c804cf9f6b08ec80a2"
+remark-copy-linked-files@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/remark-copy-linked-files/-/remark-copy-linked-files-1.0.20.tgz#90c9cb4a9e1c33867fbfe09057fa2acb67c2d286"
+  integrity sha512-Ci82DDrW71p0MhCDzW/SwTBH6VBsBdkIzQ82qvrjAJZmbfu5g/GQPXM9rZFvk28Y49+ic+T6vo2zETRRY0nyDg==
   dependencies:
     apr-for-each "^3.0.3"
     apr-intercept "^3.0.4"
@@ -4947,7 +4948,6 @@ regjsparser@^0.6.4:
     cp-file "^9.0.0"
     is-relative-url "^3.0.0"
     lodash.uniqby "^4.7.0"
-    mz "^2.7.0"
     rev-hash "^3.0.0"
 
 remark-footnotes@2.0.0:

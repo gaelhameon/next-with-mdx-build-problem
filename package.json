@@ -9,10 +9,11 @@
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
     "@next/mdx": "^9.1.1",
+    "mz": "^2.7.0",
     "next": "^10.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "remark-copy-linked-files": "https://github.com/gaelhameon/remark-copy-linked-files/#feat/nextjs",
+    "remark-copy-linked-files": "^1.0.20",
     "remark-images": "^2.0.0"
   },
   "license": "MIT"
