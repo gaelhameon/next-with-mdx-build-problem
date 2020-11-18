@@ -7,18 +7,18 @@ Sur un site Next.js classique, tous les éléments statiques doivent être dépo
 
 On aimerait pouvoir garder les images près du contenu qu'elles accompagent, comme ceci: 
 
-![arborescence](.\image-pres-md.png)
+![arborescence](./image-pres-md.png)
 
 Pour les utiliser dans le markdown, on a alors des chemins d'accès assez simples:
 ```md
-![](.\image-pres-md.png)
+![](./image-pres-md.png)
 ```
 
 Ça marche bien en local pendant qu'on édite le markdown dans VS Code.
 
 Mais quand la page est rendue dans Next.js, ça ne marche plus:
 
-![page avec image non trouvée](.\image-non-trouvee.png)
+![page avec image non trouvée](./image-non-trouvee.png)
 
 Le navigateur cherche une image à l'url http://localhost:3000/notes/.%5Cimage-pres-md.png, et le serveur Next.js ne renvoie rien pour cette url.
 
@@ -64,7 +64,7 @@ On va donc changer notre `destinationDir` pour ajouter un sous dossier, puis ajo
 Les images sont maintenant à un endroit ou notre serveur Next.js peut les servir, tout devrait bien aller!
 
 Next.js sert bien les images:
-![](.\served-image-success.png)
+![](./served-image-success.png)
 
 Par contre, dans la page web, ce n'est toujours pas bon.
 
