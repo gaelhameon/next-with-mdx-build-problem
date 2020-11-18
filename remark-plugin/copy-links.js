@@ -53,17 +53,25 @@ module.exports = (opts = {}) => {
       const assets = [];
 
       const handleUrl = async (url) => {
+        console.log(`handling url: ${url}`);
         if (!isRelativeUrl(url)) {
+          console.log(`not relative`)
           return;
         }
 
         const ext = extname(url);
         if (!ext || ignoreFileExtensions.includes(ext)) {
+          console.log(`ignored extension`)
           return;
         }
 
         const fullpath = resolve(cwd, path ? dirname(path) : '', url);
+        console.log(`resolved fullpath: ${fullpath}`);
+        console.log(cwd);
+        console.log(path);
+        console.log(dirname(path));
         if (!(await exists(fullpath))) {
+          console.log(`path does NOT exist on this filesystem`);
           return;
         }
 
