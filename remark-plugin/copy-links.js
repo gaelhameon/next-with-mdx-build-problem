@@ -9,6 +9,7 @@ const { readFile, exists } = require('mz/fs');
 const { dirname, resolve, basename, extname, join } = require('path');
 const revHash = require('rev-hash');
 const UniqBy = require('lodash.uniqby');
+const {inspect } = require('util');
 
 console.log(`top of copy-links after requires`)
 
@@ -139,7 +140,10 @@ module.exports = (opts = {}) => {
         jsx: (...args) => handlers.html(...args),
       };
 
+      console.log(`here is the tree: ${inspect(tree, false, 1)}`);
+      let nodeCount = 0;
       const newTree = await map(tree, async (node) => {
+        nodeCount++;
         try {
           return handlers[node.type] ? handlers[node.type](node) : node;
         } catch (err) {
@@ -147,10 +151,14 @@ module.exports = (opts = {}) => {
           return node;
         }
       });
+      console.log(`Handled that many nodes: ${nodeCount}`)
 
+      console.log(`Will handle these assets:`);
+      console.log(assets);
       await ForEach(
         UniqBy(assets.filter(Boolean), 'filename'),
         async ({ fullpath, filename }) => {
+          console.log(filename);
           const destPath = join(destinationDir, filename);
           console.log(`Will copy from ${fullpath} to ${destPath}`);
           try {
